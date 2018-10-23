@@ -14,6 +14,7 @@ class Stack{
         void addLength();
         void push(const T &a);
         void pop();
+        void clearStack();
 };
 template<typename T>
 Stack<T>::Stack(){
@@ -67,4 +68,11 @@ void Stack<T>::push(const T &a){
 template<typename T>
 void Stack<T>::pop(){
      --top;
+}
+
+template<typename T>
+void Stack<T>::clearStack(){
+       while(top>-1){
+               top--;
+       }
 }
